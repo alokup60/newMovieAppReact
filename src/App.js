@@ -8,9 +8,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="main">
-        {movieApi.map((e) => {
+        {movieApi.map((e, index) => {
           return (
             <Movie
+              key={index}
               img={e.Poster}
               title={e.Title}
               year={e.Year}
